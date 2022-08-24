@@ -15,9 +15,6 @@ categories = ["cryptography::cryptocurrencies"]
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
 
-[lib]
-crate-type = ["staticlib"]
-
 [dependencies]
 async-trait = {version = "0.1.51", default-features = false }
 backtrace = {version = "0.3.62", default-features = false }

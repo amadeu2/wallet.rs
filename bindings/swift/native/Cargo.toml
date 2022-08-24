@@ -1,5 +1,5 @@
 [package]
-name = "iota-wallet"
+name = "wallet"
 version = "0.1.0"
 authors = ["IOTA Stiftung"]
 edition = "2021"
@@ -8,9 +8,9 @@ edition = "2021"
 crate-type = ["cdylib", "staticlib"]
 
 [dependencies]
-bee-common = { version = "0.5.0", default-features = false }
+bee-common = { version = "0.4.1", default-features = false }
 futures = { version = "0.3.17", default-features = false }
-iota-wallet = { git = "https://github.com/iotaledger/wallet.rs", branch = "dev", default-features = false, features = ["stronghold"] }
+iota-wallet = { path = "../../../", version = "0.2.0", default-features = false, features = ["stronghold"] }
 log = { version = "0.4.14", default-features = false }
 once_cell = { version = "1.8.0", default-features = false }
 riker = { version = "0.4.2", default-features = false }
