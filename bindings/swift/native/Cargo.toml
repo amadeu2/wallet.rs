@@ -5,7 +5,7 @@ authors = ["IOTA Stiftung"]
 edition = "2021"
 
 [lib]
-crate-type = ["cdylib", "staticlib"]
+crate-type = ["staticlib"]
 
 [dependencies]
 bee-common = { version = "0.4.1", default-features = false }
