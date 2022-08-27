@@ -3,7 +3,7 @@ set -e
 
 FRAMEWORK_NAME=IOTAWalletInternal
 
-./make_framework.sh --target aarch64-apple-darwin
+# ./make_framework.sh --target aarch64-apple-darwin
 ./make_framework.sh --target aarch64-apple-ios
 ./make_framework.sh --target x86_64-apple-ios
 
@@ -11,8 +11,8 @@ mkdir -p target/universal/
 rm -rf target/universal/$FRAMEWORK_NAME.xcframework
 mkdir target/universal/$FRAMEWORK_NAME.xcframework
 
-mkdir -p target/aarch64-apple-darwin/$FRAMEWORK_NAME.framework target/universal/$FRAMEWORK_NAME.xcframework/macos-arm64
-cp -r target/aarch64-apple-darwin/$FRAMEWORK_NAME.framework target/universal/$FRAMEWORK_NAME.xcframework/macos-arm64/
+# mkdir -p target/aarch64-apple-darwin/$FRAMEWORK_NAME.framework target/universal/$FRAMEWORK_NAME.xcframework/macos-arm64
+# cp -r target/aarch64-apple-darwin/$FRAMEWORK_NAME.framework target/universal/$FRAMEWORK_NAME.xcframework/macos-arm64/
 
 mkdir -p target/aarch64-apple-ios/$FRAMEWORK_NAME.framework target/universal/$FRAMEWORK_NAME.xcframework/ios-arm64
 cp -r target/aarch64-apple-ios/$FRAMEWORK_NAME.framework target/universal/$FRAMEWORK_NAME.xcframework/ios-arm64/
@@ -28,18 +28,6 @@ tee -a target/universal/$FRAMEWORK_NAME.xcframework/Info.plist > /dev/null <<EOT
 <dict>
 	<key>AvailableLibraries</key>
 	<array>
-		<dict>
-			<key>LibraryIdentifier</key>
-			<string>macos-arm64</string>
-			<key>LibraryPath</key>
-			<string>${FRAMEWORK_NAME}.framework</string>
-			<key>SupportedArchitectures</key>
-			<array>
-				<string>arm64</string>
-			</array>
-			<key>SupportedPlatform</key>
-			<string>macos</string>
-		</dict>
 		<dict>
 			<key>LibraryIdentifier</key>
 			<string>ios-arm64</string>

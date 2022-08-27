@@ -1,3 +1,8 @@
+// Copyright 2020 IOTA Stiftung
+// SPDX-License-Identifier: Apache-2.0
+
+// pub mod wallet_actor;
+
 mod actors;
 pub mod c;
 use actors::{dispatch, DispatchMessage, WalletActor, WalletActorMsg};
@@ -37,7 +42,7 @@ struct WalletActorData {
 }
 
 type WalletActors = Arc<AsyncMutex<HashMap<String, WalletActorData>>>;
-type MessageReceiver = Box<dyn Fn(String) + Send + Sync + 'static>;
+type MessageReceiver = Box<dyn Fn(String) + Send + 'static>;
 type MessageReceivers = Arc<Mutex<HashMap<String, MessageReceiver>>>;
 
 fn wallet_actors() -> &'static WalletActors {
