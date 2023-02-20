@@ -1,5 +1,12 @@
 # Changelog
 
+## \[2.0.3-rc.22]
+
+- Fixed `Account::getParticipationOverview()` with multiple events and different nodes;
+  - [890214b8](https://github.com/iotaledger/wallet.rs/commit/890214b88c4a7683414087f62ca1e89249e062e7) Fix get_participation_overview() ([#1867](https://github.com/iotaledger/wallet.rs/pull/1867)) on 2023-02-17
+- Removed clearListener from the direct bindings in favour of the message interface.
+  - [5566baa3](https://github.com/iotaledger/wallet.rs/commit/5566baa3242cf30c1db627a5fc00bbf26f4274fd) Add wasm bindings ([#1855](https://github.com/iotaledger/wallet.rs/pull/1855)) on 2023-02-17
+
 ## \[2.0.3-rc.21]
 
 - Stop endlessly waiting in `AccountManager::stopBackgroundSync()` if background syncing wasn't started;
