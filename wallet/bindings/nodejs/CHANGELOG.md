@@ -1,5 +1,12 @@
 # Changelog
 
+## \[2.0.3-rc.24]
+
+- Fix address for the amount of expired NFTs that get burned with `Account::burnNft()`;
+  - [1e3c1fc8](https://github.com/iotaledger/wallet.rs/commit/1e3c1fc8eac869b5e85d79189bf2cc0812c7cb05) Fix address for the amount of expired NFTs that get burned with `Account::burn_nft()` ([#1916](https://github.com/iotaledger/wallet.rs/pull/1916)) on 2023-03-06
+- Return correct error for wrong ManagerOptions.
+  - [4fc11ba8](https://github.com/iotaledger/wallet.rs/commit/4fc11ba87750534ea9600e1a612922bf1f594d79) Return error for wrong ManagerOptions ([#1926](https://github.com/iotaledger/wallet.rs/pull/1926)) on 2023-03-06
+
 ## \[2.0.3-rc.23]
 
 - `Account::getParticipationOverview` optional accepts eventIds to filter.
